@@ -1,0 +1,16 @@
+.bar {
+    width:12px;
+    height:290px;
+    display:inline-block;
+    margin:2px;
+    border-radius: 2px;
+}
+
+.test {
+    display:block;
+    min-height:300px;
+}
+
+body{
+    background: #2c3e50;
+}

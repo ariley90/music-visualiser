@@ -1,0 +1,37 @@
+  {
+  "name": "music-visualiser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.12.3",
+    "react": "^0.12.0"
+  },
+  "devDependencies": {
+    "browserify": "^6.2.0",
+    "envify": "^3.0.0",
+    "reactify": "^0.15.2",
+    "uglify-js": "~2.4.15",
+    "watchify": "^2.1.1"
+  },
+  "scripts": {
+    "start": "node server.js & watchify app.js -o public/bundle.js -v -d . -i test.mp3",
+    "build": "NODE_ENV=production browserify . | uglifyjs -cm > js/bundle.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ariley90/music-visualiser.git"
+  },
+  "author": "Adam Riley",
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ariley90/music-visualiser/issues"
+  },
+  "homepage": "https://github.com/ariley90/music-visualiser"
+}
